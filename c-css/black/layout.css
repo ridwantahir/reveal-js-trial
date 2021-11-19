@@ -1,0 +1,12 @@
+
+.itemleft { grid-area: left; width:100%;}
+.itemright {grid-area: right; width:100%;}
+
+.grid-container {
+    display: grid;
+    grid-gap: 1px;
+    padding: 1px;
+    grid-template-areas:
+    'left  right ';
+}
+

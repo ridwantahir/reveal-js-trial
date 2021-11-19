@@ -1,0 +1,25 @@
+a.data-dir-tree { 
+    font-weight : normal; 
+    text-decoration : none; 
+    background-color : transparent; 
+    margin : 0px 0px 0px 0px; 
+    padding : 0px 0px 0px 0px; display: inline; 
+    color:green
+}
+a.data-dir-tree.data-dir-tree-selected { 
+font-weight : normal; 
+text-decoration : none; 
+background-color : transparent; 
+margin : 0px 0px 0px 0px; 
+padding : 0px 0px 0px 0px; display: inline; 
+color:lightgreen
+}	
+.data-dir-tree { 
+width: fit-content;
+text-align: left;
+font-family: ariel, monospace, sans-serif;
+font-size: large;
+line-height: 1.3;
+font-weight: normal;
+color: white;
+}

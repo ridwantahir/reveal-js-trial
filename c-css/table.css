@@ -1,0 +1,27 @@
+
+.data-file-table.data-file-table table {
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+	font-family: sans-serif;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    font-size: 12px;
+}
+
+.data-file-table.data-file-table th, .data-file-table.data-file-table td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
+.data-file-table.data-file-table th {
+	text-align: left;
+    background-color: #55608f;
+}
+
+.data-file-table.data-file-table thead {
+    background-color: #55608f;
+}
+tr.data-file-table-active.data-file-table-active{
+    background-color: rgba(255,255,255,0.3);
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<link rel="stylesheet" href="c-css/demo.css">
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown="slides/chap4.md">
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/svganimate/plugin.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+		<script src="plugin/chart/plugin.js"></script>
+		<script src="plugin/dirtree/plugin.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				disableLayout: false,
+				center: true,
+				//width: 1200,
+  				//height: 700,
+
+				  chart: {
+					defaults: {
+						color: 'white', // color of labels
+						scale: {
+							beginAtZero: true,
+							ticks: { stepSize: 1 },
+							//grid: { color: "lightgray" } , // color of grid lines
+						},
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ] },
+					bar: { backgroundColor: ['#49A9EA', '#36CAAB', '#34495E', '#B370CF' ]},
+					pie: { backgroundColor: [['#49A9EA', '#36CAAB', '#34495E', '#B370CF', '#AC5353', '#CFD4D8']]},
+					doughnut: { backgroundColor: [['#49A9EA', '#36CAAB', '#34495E', '#B370CF', '#AC5353', '#CFD4D8']]}
+				},
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealChart, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealDirTree, RevealHighlight, RevealSvgAnimate ]
+			});
+		</script>
+	</body>
+</html>

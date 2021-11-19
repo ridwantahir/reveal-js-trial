@@ -1,0 +1,49 @@
+- 2 cols: side by side
+- 3 cols: side by side
+- 4 cols: side by side
+- 5 cols: side by side
+- 2*2 grid
+- 3*3 grid
+- 4*4 grid
+- 5*5 grid
+- n*m gird
+- one top wide, two columns
+- one top, <left div, <top, <left, and right>>>
+- n-horizontal rows, with vertical stacks in them. (vertival stacks arrange items horizontally) 
+- a pragraph with inline image
+- one top row with header, three columns, with elements in them (possible duplicate)
+- a few rows with header, three columns, with elements in them (possible duplicate)
+- mixture of n column layout, horizontal row, headings and texts
+- a heading, a row with items in it that are horizontally arragned, and then another row
+- horizontal list with image icons as bullet
+- top heading, with three colums under it
+- top heading , wtth three columns under it and then footer
+- 2*3 grid
+- 2*4 grid, but the first cell spans two columns
+- two rows, with items in them. the first row items verical laid out, the second row horizontally laid out
+- grid layout with text images in them arragned verically
+- image and inforgraphic side by side
+- two codes blocks side by side, with a heading above them
+- two code blocks side by side, with <p> above them
+- three code blocks side by side, with either <h> or <p> above them
+- heading on top, and then list and image side by side,
+- heading on top, and then list and image side by side and then footer,
+- heading on top, code block on the right, and demo on the left
+- heading on top, svg whole page
+- heading on top, svg on the left, explantion on the right, i.e list, etc
+- heading on top, svg on the left, list on the right, bottom <p> element
+- code and gif side by side
+
+
+
+properties:
+- with separator, i.e boundary line hsowing
+- image icons for list
+- image icons for <p> elements, adjustable size
+- left aligned, cneter aligned elements in layout grid
+- alignement, font size, color, etc per element
+- beautful backgrounds, possible moving slightly
+- formatting items in a grid individually
+- styles for different headings
+- styles for different p tags
+- 

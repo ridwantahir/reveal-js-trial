@@ -1,0 +1,39 @@
+.itemleft { grid-area: left; width:100%;}
+			.itemright {grid-area: right; width:100%;}
+			
+			.grid-container {
+			  display: grid;
+			  grid-gap: 1px;
+			  padding: 1px;
+			  grid-template-areas:
+				'left  right ';
+			}
+			.chart {
+				text-align: center;
+				
+			}
+			a.data-dir-tree { 
+                 font-weight : normal; 
+                 text-decoration : none; 
+                 background-color : transparent; 
+                 margin : 0px 0px 0px 0px; 
+                 padding : 0px 0px 0px 0px; display: inline; 
+                 color:green
+                }
+			a.data-dir-tree.data-dir-tree-selected { 
+				font-weight : normal; 
+				text-decoration : none; 
+				background-color : transparent; 
+				margin : 0px 0px 0px 0px; 
+				padding : 0px 0px 0px 0px; display: inline; 
+				color:lightgreen
+			}	
+			.data-dir-tree { 
+				width: fit-content;
+				text-align: left;
+				font-family: ariel, monospace, sans-serif;
+				font-size: large;
+				line-height: 1.3;
+				font-weight: normal;
+				color: white;
+			}
