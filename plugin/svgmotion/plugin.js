@@ -31,7 +31,7 @@ function initAnimate() {
         if (terminalElements.includes(el1.tagName)) {
             let newId = genAnimId(idBase, el1.tagName, itertn)
             let animParams = el2.getAttributeNames()
-                .filter(n => !['id', 'data-keyframe-id', 'data-motion-id'].includes(n))
+                .filter(n => !['id', 'data-keyframe-id', 'data-motion-id', 'xlink:href', 'href', 'preserveAspectRatio'].includes(n))
                 .map(a => {
                     let oneAnimParam = {}
                     oneAnimParam['element'] = newId
@@ -53,7 +53,7 @@ function initAnimate() {
             if (chldrn2[i].getAttributeNames) {
                 let newId = genAnimId(idBase, chldrn1[i].tagName, itertn)
                 let animParams = chldrn2[i].getAttributeNames()
-                    .filter(n => !['id', 'data-keyframe-id', 'data-motion-id'].includes(n))
+                    .filter(n => !['id', 'data-keyframe-id', 'data-motion-id', 'xlink:href', 'href', 'preserveAspectRatio'].includes(n))
                     .map(a => {
                         let oneAnimParam = {}
                         oneAnimParam['element'] = newId
@@ -73,7 +73,8 @@ function initAnimate() {
     function addDummyFragment(elmt, minRequired) {
         let sectionParent = elmt.closest('section');
         let fragCounts = sectionParent.querySelectorAll(".fragment").length
-        for (let j = 0; j < minRequired - fragCounts; j++) {
+        console.log(fragCounts + " / " + minRequired)
+        for (let j = fragCounts; j < minRequired; j++) {
             var spn = document.createElement("SPAN");
             spn.className = "fragment"
             spn.setAttribute("data-fragment-index", `${j}`)
@@ -180,6 +181,7 @@ function initAnimate() {
         SVGInject(document.querySelectorAll("img.data-svg-motion"))
             .then((value) => {
                 initAll()
+                console.log(animationMetaData)
             });
 
     }

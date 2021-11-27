@@ -83,3 +83,55 @@ ul li {
     font-weight: normal;
     margin: 0
 }
+
+.data-svg-motion.data-svg-motion p,
+.data-svg-motion.data-svg-motion span,
+.data-svg-motion.data-svg-motion h1,
+.data-svg-motion.data-svg-motion h2,
+.data-svg-motion.data-svg-motion h3,
+.data-svg-motion.data-svg-motion h4,
+.data-svg-motion.data-svg-motion h5,
+.data-svg-motion.data-svg-motion h6,
+.data-svg-motion.data-svg-motion a,
+.data-svg-motion.data-svg-motion li {
+    display: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    margin: revert;
+    padding: revert;
+    text-align: inherit;
+    padding: inherit;
+    border: inherit;
+    font: inherit;
+    vertical-align: inherit;
+    opacity: inherit;
+    color: inherit;
+    background-color: inherit;
+    text-transform: inherit;
+    border-color: inherit;
+    word-wrap: inherit;
+    white-space: inherit;
+    box-sizing: inherit;
+    max-height: inherit;
+    overflow: inherit;
+    text-align: inherit;
+    pointer-events: inherit
+}
+
+.data-svg-motion.data-svg-motion h1 {
+    font-size: 1.8em;
+}
+
+.data-svg-motion.data-svg-motion h2 {
+    font-size: 1.5em;
+}
+
+.data-svg-motion.data-svg-motion h3 {
+    font-size: 1.4em;
+}
+
+.data-svg-motion.data-svg-motion h4 {
+    font-size: 1.3em;
+}
