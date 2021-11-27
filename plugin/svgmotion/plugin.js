@@ -161,7 +161,7 @@ function initAnimate() {
                 let ue = animElts[i]
                 animProps = {
                     targets: ue,
-                    duration: 3000,
+                    duration: 500,
                     easing: 'linear'
                 }
                 curA = fragMetaData.filter(a => '#' + a['element'] == ue)
