@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SVG.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+</head>
+<section>
+    <svg data-keyframe-id="67" data-motion-id width="100" height="100">
+        <circle data-id="nj" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="green" />
+    </svg>
+</section>
+<section>
+    <svg data-keyframe-id="67" data-motion-id width="100" height="100">
+        <circle data-id="nj" cx="90" cy="50" r="40" stroke="red" stroke-width="4" fill="yellow" />
+    </svg>
+</section>
+
+<body>
+
+    <script>
+        groupBy = function(data, key) { // `data` is an array of objects, `key` is the key (or property accessor) to group by
+            // reduce runs this anonymous function on each element of `data` (the `item` parameter,
+            // returning the `storage` parameter at the end
+            return data.reduce(function(storage, item) {
+                // get the first instance of the key by which we're grouping
+                var group = item[key];
+
+                // set `storage` for this instance of group to the outer scope (if not empty) or initialize it
+                storage[group] = storage[group] || [];
+
+                // add this item to its group within `storage`
+                storage[group].push(item);
+
+                // return the updated storage to the reduce function, which will then loop through the next 
+                return storage;
+            }, []); // {} is the initial value of the storage
+        };
+        var bla = [
+            [{
+                ind: 1,
+                b: [{
+                        e: '#2',
+                        a: 1,
+                        b: 2
+                    },
+
+                ]
+            }, {
+                ind: 1,
+                b: [{
+                        e: '#2',
+                        a: 1,
+                        b: 2
+                    },
+
+                ]
+            }, {
+                ind: 2,
+                b: [{
+                    e: '#3',
+                    a: 1,
+                    b: 3
+                }]
+            }, ],
+            [{
+                ind: 7,
+                b: [{
+                    e: '#4',
+                    a: 1,
+                    b: 2
+                }]
+            }, {
+                ind: 3,
+                b: [{
+                    e: '#5',
+                    a: 1,
+                    b: 3
+                }]
+            }, ],
+        ]
+        console.log(bla.flat())
+        intee = groupBy(bla.flat(), 'ind') //.values() //.map(es => es.map(e => e['b']))
+        var sortedIndexes = [];
+        for (var key in intee) {
+            sortedIndexes[sortedIndexes.length] = parseInt(key);
+        }
+        sortedIndexes.sort();
+        maxIndex = Math.max(...sortedIndexes)
+        computedAnimations = []
+        for (let i = 0; i <= maxIndex; i++) {
+            if (sortedIndexes.includes(i)) {
+                computedAnimations[i] = intee[i].map(r => r['b'])
+            } else {
+                computedAnimations[i] = []
+            }
+        }
+        console.log(computedAnimations)
+        keys = intee.keys()
+        console.log(keys)
+        console.log(intee)
+        console.log(intee[0])
+        console.log(intee[1])
+        console.log(intee[2])
+
+        var mysvg = SVG.find('[data-keyframe-id][data-motion-id]')
+        console.log(SVG(document.querySelectorAll('[data-keyframe-id][data-motion-id]')))
+        console.log(mysvg.length)
+        console.log(mysvg[0].attr('data-keyframe-id'))
+        console.log(mysvg[0].x())
+        console.log(mysvg[0].opacity())
+        mysvg[0].node.id = "3450"
+        console.log(mysvg[0].node.id)
+        console.log(document.getElementById("3450"))
+        var draw = SVG().addTo('body').size(300, 300)
+        var rect = draw.rect(100, 100).attr({
+            fill: '#f06'
+        })
+        rect.animate().move(150, 150)
+        rect.animate({
+            duration: 2000,
+            delay: 1000,
+            when: 'now',
+            swing: true,
+            times: 5,
+            wait: 200
+        }).attr({
+            fill: '#000'
+        })
+        rect.animate().attr({
+            fill: '#f03'
+        }).animate().dmove(50, 50)
+
+        var timeline = new SVG.Timeline()
+
+        var rect1 = draw.rect(50, 20)
+        var rect2 = draw.rect(60, 10)
+
+        rect1.timeline(timeline)
+        rect2.timeline(timeline)
+
+        rect1.animate(3000, 0, 'absolute').dmove(300, 300) // start at time 0 of timeline
+        rect2.animate(4000, 200, 'absolute').dmove(500, 500) // start at time 200 of timeline
+        console.log(rect.attr())
+    </script>
+</body>
+
+</html>

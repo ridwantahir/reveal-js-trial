@@ -1,6 +1,9 @@
 example - 1/example.html
 example - 1/example.js
 example - 2/example.html
+example - 2/day1/food.css
+example - 2/day1/tree.css
+example - 2/day2/tree.css
 example - 2/example.js
 example - 2/Sample-Emitter.js
 example - 3/example.html

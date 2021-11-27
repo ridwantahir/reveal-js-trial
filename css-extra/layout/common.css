@@ -1,0 +1,11 @@
+img .reverse-color.reverese-color {
+    filter: invert(100%);
+}
+
+img .blur-color.blur-color {
+    filter: invert(50%);
+}
+
+img {
+    background-color: transparent;
+}

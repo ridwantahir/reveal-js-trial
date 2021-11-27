@@ -1,0 +1,13 @@
+@import url(../layout/master.css);
+:root {
+    --dir-tree-color: green;
+    --dir-tree-active-color: lightgreen;
+    --dir-tree-lines-color: white;
+    --grid-border-color: gray;
+    --data-table-bg-color: linear-gradient(0deg, #000000, #7f7d80);
+    --data-table-active-col-color: rgba(14, 190, 230, 0.3);
+    --data-table-active-row-color: rgba(14, 190, 230, 0.3);
+    --data-table-head-bg-color: #55608f;
+    --data-table-td-bg-color: rgb(255, 255, 255, 0.2);
+    --data-table-td-color: #ffff;
+}

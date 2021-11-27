@@ -1,0 +1,144 @@
+<body class="reveal-viewport" style="transition: -webkit-transform 0.8s ease 0s; --slide-width:960px; --slide-height:700px;">
+    <div class="reveal slide focused has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="fade" style="cursor: none;">
+        <div class="slides">
+            <section data-markdown="" data-markdown-parsed="true" data-auto-animate="" hidden="" aria-hidden="true" class="past" style="display: block;">
+                <h2 id="bmm">bmm</h2>
+                <!-- -->
+
+                <div id="c">
+
+                    <div>
+
+                        <div>
+
+                            <div data-id="box" style="height: 50px; background: salmon;">
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <section data-markdown="" data-markdown-parsed="true" data-auto-animate="running" class="present" style="display: block;">
+                <!-- -->
+
+                <div id="d" data-auto-animate-target="unmatched">
+
+                    <div>
+
+                        <div>
+
+                            <div data-id="box" style="height: 200px; background: blue;">
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <section data-markdown="" data-markdown-parsed="true" data-auto-animate="pending" data-auto-animate-duration="5" class="future" style="display: block;" hidden="" aria-hidden="true">
+                <!-- -->
+
+                <svg width="100" height="100">
+  <circle data-id="nj" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+</svg>
+            </section>
+            <section data-markdown="" data-markdown-parsed="true" data-auto-animate="" data-auto-animate-duration="5" class="future" style="display: block;" hidden="" aria-hidden="true">
+                <!-- -->
+
+                <svg width="100" height="100">
+  <circle data-id="nj" cx="70" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+</svg>
+
+
+            </section>
+        </div>
+        <div class="backgrounds">
+            <div class="slide-background past" style="display: block;" data-loaded="true">
+                <div class="slide-background-content"></div>
+            </div>
+            <div class="slide-background present" data-loaded="true" style="display: block;">
+                <div class="slide-background-content"></div>
+            </div>
+            <div class="slide-background future" data-loaded="true" style="display: block;">
+                <div class="slide-background-content"></div>
+            </div>
+            <div class="slide-background future" data-loaded="true" style="display: block;">
+                <div class="slide-background-content"></div>
+            </div>
+        </div>
+        <div class="slide-number" style="display: none;"></div>
+        <aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+            <button class="navigate-right enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+            <button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+            <button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside>
+        <div class="progress" style="display: block;"><span style="transform: scaleX(0.333333);"></span></div>
+        <div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div>
+        <div class="pause-overlay"><button class="resume-button">Resume presentation</button></div>
+        <div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);"></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/svganimate/plugin.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <script src="plugin/chart/plugin.js"></script>
+    <script src="plugin/dirtree/plugin.js"></script>
+    <script src="plugin/table/plugin.js"></script>
+    <script src="plugin/svgmotion/plugin.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            disableLayout: true,
+            center: false,
+            //width: 1200,
+            //height: 700,
+
+            chart: {
+                defaults: {
+                    color: 'white', // color of labels
+                    scale: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        },
+                        //grid: { color: "lightgray" } , // color of grid lines
+                    },
+                },
+                line: {
+                    borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"]
+                },
+                bar: {
+                    backgroundColor: ['#49A9EA', '#36CAAB', '#34495E', '#B370CF']
+                },
+                pie: {
+                    backgroundColor: [
+                        ['#49A9EA', '#36CAAB', '#34495E', '#B370CF', '#AC5353', '#CFD4D8']
+                    ]
+                },
+                doughnut: {
+                    backgroundColor: [
+                        ['#49A9EA', '#36CAAB', '#34495E', '#B370CF', '#AC5353', '#CFD4D8']
+                    ]
+                }
+            },
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealChart, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealTable, RevealDirTree, RevealHighlight, RevealSvgAnimate, RevealSvgMotion]
+        });
+    </script>
+
+
+</body>

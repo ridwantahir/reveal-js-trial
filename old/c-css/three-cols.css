@@ -1,0 +1,53 @@
+/*:root {
+    ---ch-height: var(---ch-height, auto);
+    --ch-width: 90vw;
+}*/
+
+.grid-container-3.grid-container-3 {
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: auto auto auto;
+    padding: 1px;
+}
+
+.grid-item-3.grid-item-3 {
+    max-width: 85vw;
+    border-style: dashed;
+    border-color: gray!important;
+    border-width: 1px;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.grid-item-3.grid-item-3 * {
+    max-width: var(--ch-width);
+    overflow: hidden;
+}
+
+.grid-container-3.grid-container-3>* {
+    height: var(---ch-height);
+    width: var(--ch-width);
+}
+
+.grid-item-3.grid-item-3>p,
+.grid-item-3.grid-item-3>h1,
+.grid-item-3.grid-item-3>h2,
+.grid-item-3.grid-item-3>h3,
+.grid-item-3.grid-item-3>h4,
+.grid-item-3.grid-item-3>h5,
+.grid-item-3.grid-item-3>h6,
+.grid-item-3.grid-item-3>span,
+.grid-item-3.grid-item-3>a {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.grid-item-3.grid-item-3>p,
+.grid-item-3.grid-item-3>span,
+.grid-item-3.grid-item-3>a {
+    font-family: ariel, monospace, sans-serif;
+    font-size: large;
+    line-height: 1.3;
+    font-weight: normal;
+}

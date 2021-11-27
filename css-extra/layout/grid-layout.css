@@ -1,0 +1,85 @@
+/*:root {
+    ---ch-height: var(---ch-height, auto);
+    --ch-width: 90vw;
+}*/
+
+
+/*p,
+ul li {
+    text-align: left !important;
+}*/
+
+.grid-parent.grid-parent {
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: repeat(var(--num-cols, 2), 1fr);
+    padding: 1px;
+}
+
+.grid-parent.grid-parent * {
+    height: var(--item-height, unset);
+    width: var(--item-width, unset);
+    max-width: 95%;
+    max-height: 95%;
+}
+
+.grid-parent.grid-parent>* {
+    height: var(--ch-height, auto);
+    width: var(--ch-width, auto);
+    max-width: 100vw;
+    border-style: dashed;
+    border-color: var(--grid-border-color);
+    border-width: 1px;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.grid-parent.grid-parent code {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-parent.grid-parent pre {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*.grid-child.grid-child {
+    max-width: 85vw;
+    border-style: dashed;
+    border-color: gray!important;
+    border-width: 1px;
+    max-height: 100vh;
+    overflow: hidden;
+}*/
+
+.grid-parent.grid-parent * {
+    overflow: hidden;
+}
+
+.grid-parent.grid-parent div>p,
+.grid-parent.grid-parent div>h1,
+.grid-parent.grid-parent div>h2,
+.grid-parent.grid-parent div>h3,
+.grid-parent.grid-parent div>h4,
+.grid-parent.grid-parent div>h5,
+.grid-parent.grid-parent div>h6,
+.grid-parent.grid-parent div>span,
+.grid-parent.grid-parent div>ul>li,
+.grid-parent.grid-parent div>a {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.grid-parent.grid-parent div>p,
+.grid-parent.grid-parent div>span,
+.grid-parent.grid-parent div>ul>li,
+.grid-parent.grid-parent div>a {
+    font-family: ariel, monospace, sans-serif;
+    font-size: x-large;
+    line-height: 1.5;
+    font-weight: normal;
+    margin: 0
+}
