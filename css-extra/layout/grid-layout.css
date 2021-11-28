@@ -107,7 +107,7 @@ ul li {
     font: inherit;
     vertical-align: inherit;
     opacity: inherit;
-    color: inherit;
+    /* color: inherit; */
     background-color: inherit;
     text-transform: inherit;
     border-color: inherit;

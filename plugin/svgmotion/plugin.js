@@ -17,21 +17,22 @@ function initAnimate() {
 
     function copyAttributesRec(baseElmt1, baseElmt2, res, idBase, fragIndx, itertn) {
         let terminalElements = ["circle", "ellipse", "line", "mesh", "path", "polygon", "polyline", "rect", "image", "text", "textPath"]
+        let nonAnimatables = ['id', 'data-keyframe-id', 'data-motion-id', 'xlink:href', 'href', 'preserveAspectRatio', "color"]
         let el1 = baseElmt1 //baseElmt1.querySelector(sel1);
         let el2 = baseElmt2 //baseElmt2.querySelector(sel2);
             //let res = []
         if (el1.tagName != el2.tagName) {
-            throw `el1 is a ${el1.tagName} , while el2 is a ${el2.tagName}`
+            throw `el1 is a ${el1.tagName} , while el2 is a ${el2.tagName} in ${idBase}`
         }
         let chldrn1 = el1.childNodes;
         let chldrn2 = el2.childNodes;
         if (chldrn1.length != chldrn2.length) {
-            throw `el1 has ${chldrn1.length} childrens while el2 has ${chldrn2.length}`
+            throw `el1 has ${chldrn1.length} childrens while el2 has ${chldrn2.length} in ${idBase}`
         }
         if (terminalElements.includes(el1.tagName)) {
             let newId = genAnimId(idBase, el1.tagName, itertn)
             let animParams = el2.getAttributeNames()
-                .filter(n => !['id', 'data-keyframe-id', 'data-motion-id', 'xlink:href', 'href', 'preserveAspectRatio'].includes(n))
+                .filter(n => !nonAnimatables.includes(n))
                 .map(a => {
                     let oneAnimParam = {}
                     oneAnimParam['element'] = newId
@@ -53,7 +54,7 @@ function initAnimate() {
             if (chldrn2[i].getAttributeNames) {
                 let newId = genAnimId(idBase, chldrn1[i].tagName, itertn)
                 let animParams = chldrn2[i].getAttributeNames()
-                    .filter(n => !['id', 'data-keyframe-id', 'data-motion-id', 'xlink:href', 'href', 'preserveAspectRatio'].includes(n))
+                    .filter(n => !nonAnimatables.includes(n))
                     .map(a => {
                         let oneAnimParam = {}
                         oneAnimParam['element'] = newId
