@@ -74,7 +74,6 @@ function initAnimate() {
     function addDummyFragment(elmt, minRequired) {
         let sectionParent = elmt.closest('section');
         let fragCounts = sectionParent.querySelectorAll(".fragment").length
-        console.log(fragCounts + " / " + minRequired)
         for (let j = fragCounts; j < minRequired; j++) {
             var spn = document.createElement("SPAN");
             spn.className = "fragment"
@@ -182,7 +181,6 @@ function initAnimate() {
         SVGInject(document.querySelectorAll("img.data-svg-motion"))
             .then((value) => {
                 initAll()
-                console.log(animationMetaData)
             });
 
     }

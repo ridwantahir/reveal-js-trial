@@ -52,7 +52,7 @@ const initDirTree = function(Reveal) {
         });
     }
     const applyDirTreeToHtml = function(elmnt, dirData, activePath) {
-        var dirs = dirData.split("\n")
+        var dirs = dirData.split(/[\r\n]+/)
         let htmlCont = "&nbsp;&nbsp;&nbsp;./..<br>"
         let rootDir = { name: 'root' }
         jsonize(dirs, rootDir)

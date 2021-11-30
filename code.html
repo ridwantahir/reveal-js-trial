@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SVG.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+</head>
+
+<body>
+
+    <section>
+        <svg data-keyframe-id="67" data-motion-id width="100" height="100">
+        <circle data-id="nj" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="green" />
+    </svg>
+    </section>
+    <section>
+        <svg data-keyframe-id="67" data-motion-id width="100" height="100">
+        <circle data-id="nj" cx="90" cy="50" r="40" stroke="red" stroke-width="4" fill="yellow" />
+    </svg>
+    </section>
+    <section class="data-external-html" data-external-html-src=""></section>
+    <section>
+        <svg data-keyframe-id="67" data-motion-id width="100" height="100">
+        <circle data-id="nj" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="green" />
+    </svg>
+    </section>
+    <section>
+        <svg data-keyframe-id="67" data-motion-id width="100" height="100">
+        <circle data-id="nj" cx="90" cy="50" r="40" stroke="red" stroke-width="4" fill="yellow" />
+    </svg>
+    </section>
+    <script>
+        htmlS = `<section>
+    <h>Eat food2</h>
+    <h1>Drink water2</h1>
+</section>
+<section>
+    <h>Take A deep breath2</h>
+</section>
+<section>
+    <h>Walk along the river2</h>
+</section>`
+        console.log([1, 2, 3, 4].slice(1, 1))
+        document.querySelectorAll('section.data-external-html').forEach(elt => {
+            bodyExternal = (new DOMParser).parseFromString(htmlS, 'text/html').body.childNodes
+            for (let chldCount = 0; chldCount < bodyExternal.length; chldCount++) {
+                elt.parentNode.insertBefore(bodyExternal[chldCount], elt)
+            }
+            elt.remove()
+        })
+    </script>
+</body>
+
+</html>

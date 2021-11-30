@@ -7,7 +7,7 @@ window.RevealTable = {
 
 const initTable = function(Reveal) {
     function createTable(el, CSV, activeRows, activeCols) {
-        let lines = CSV.split('\n').filter(function(v) { return v !== '' });
+        let lines = CSV.split(/[\r\n]+/).filter(function(v) { return v !== '' });
         let labels = null
         let htmlEls = "<table><thead><tr>"
         let activeIndcs = activeRows.split(",")
