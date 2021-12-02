@@ -154,7 +154,7 @@ const initChart = function(Reveal) {
             canvas.chart.data.datasets = data;
             canvas.style.visibility = "visible";
             canvas.chart.update();
-        }, 500, canvas, data); // wait for slide transition to re-add data and animation
+        }, 100, canvas, data); // wait for slide transition to re-add data and animation
         /*
         		var config = canvas.chart.config;
         		canvas.chart.destroy();
@@ -174,7 +174,7 @@ const initChart = function(Reveal) {
     Reveal.addEventListener('ready', function() {
         initializeCharts();
         Reveal.addEventListener('slidechanged', function() {
-            var canvases = Reveal.getCurrentSlide().querySelectorAll("canvas[data-chart]");
+            var canvases = Reveal.getCurrentSlide().querySelectorAll("canvas[data-chart-type]");
             for (var i = 0; i < canvases.length; i++) {
                 if (canvases[i].chart && canvases[i].chart.config.options.animation !== false) {
                     recreateChart(canvases[i]);
@@ -182,6 +182,28 @@ const initChart = function(Reveal) {
             }
 
         });
+    });
+    Reveal.addEventListener('fragmentshown', function(event) {
+        //console.log("fragmentshown",event);
+        let curFragment = event.fragment
+        if (curFragment.tagName == 'DIV') {
+            var canvs = curFragment.querySelectorAll("canvas[data-chart-type]");
+            for (var i = 0; i < canvs.length; i++) {
+                if (canvs[i].chart && canvs[i].chart.config.options.animation !== false) {
+                    recreateChart(canvs[i]);
+                }
+            }
+        }
+        if (curFragment.tagName == 'CANVAS') {
+            if (curFragment.hasAttribute("data-chart-type") && curFragment.chart && curFragment.chart.config.options.animation !== false) {
+                recreateChart(curFragment);
+            }
+        }
+    });
+
+    Reveal.addEventListener('fragmenthidden', function(event) {
+        //console.log("fragmentshown",event);
+        animteMySlide();
     });
 
     this.update = updateChart;

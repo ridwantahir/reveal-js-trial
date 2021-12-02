@@ -1,10 +1,12 @@
 .data-file-table.data-file-table table {
-    background: var(--data-table-bg-color);
+    background: linear-gradient(45deg, #517493, #56588c);
+    /* background: var(--data-table-bg-color); */
     font-family: sans-serif;
     border-collapse: collapse;
     overflow: hidden;
     font-size: large;
     width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .data-file-table.data-file-table th,
@@ -23,9 +25,11 @@
 }
 
 tr.data-file-table-active-row.data-file-table-active-row {
-    background-color: var(--data-table-active-row-color)
+    /* background-color: var(--data-table-active-row-color) */
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 td.data-file-table-active-col.data-file-table-active-col {
-    background-color: var(--data-table-active-col-color)
+    /* background-color: var(--data-table-active-col-color) */
+    background-color: rgba(255, 255, 255, 0.4);
 }

@@ -31,8 +31,8 @@
 <body>
     <div class="reveal">
         <div class="slides">
-            <!-- <section data-markdown="slides/anim1.md"> </section> -->
-            <section data-auto-animate>
+            <section data-markdown="slides/code1.md"> </section>
+            <!-- <section data-auto-animate>
                 <h1>Auto-Animate</h1>
             </section>
             <section class="data-external-html" data-external-html-src="slides/codes/e1.html">
@@ -46,7 +46,6 @@
             <section>
                 <p>P2</p>
             </section>
-            <!-- data-line-numbers="|3-8|10-12"  data-ln-start-from="3" data-id="code-animation" -data-id="code-animation" -->
             <section data-auto-animate>
                 <div data-external-code-begin="1" data-external-code-end="4" class="data-external-code" data-id="code-animation" lang="python" data-extenal-code-src="slides/codes/file1.py">
 
@@ -82,7 +81,7 @@
             </section>
             <section>
                 <img src="slides/dem/k8-ng.svg" class="data-svg-motion">
-            </section>
+            </section> -->
             <!-- <section>
                 <img src="slides/images/k83.svg" class="data-svg-motion">
             </section> -->
@@ -115,6 +114,7 @@
     <script src="plugin/svgmotion/plugin.js"></script>
     <script src="plugin/external-code/plugin.js"></script>
     <script src="plugin/external-html/plugin.js"></script>
+    <script src="plugin/dynamic-styles/plugin.js"></script>
     <script src="js-extra/svg-inject.js"></script>
     <script src="js-extra/svg.min.js"></script>
     <script>
@@ -157,7 +157,7 @@
                 }
             },
             // Learn about plugins: https://revealjs.com/plugins/
-            plugins: [RevealMarkdown, RevealExternalHtml, RevealChart, RevealExternalCode, RevealTable, RevealDirTree, RevealZoom, RevealNotes, RevealSearch, RevealHighlight, RevealSvgAnimate, RevealSvgMotion]
+            plugins: [RevealMarkdown, RevealExternalHtml, RevealDynamicStyles, RevealChart, RevealExternalCode, RevealTable, RevealDirTree, RevealZoom, RevealNotes, RevealSearch, RevealHighlight, RevealSvgAnimate, RevealSvgMotion]
         });
     </script>
 </body>
